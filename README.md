@@ -1,5 +1,3 @@
-Here's your updated **README** with the inclusion of both the normal (unencrypted) TCP chat and the VPN-based TCP chat (`server_vpn.py` and `client_vpn.py`). The README now compares both approaches and clearly states their usage.
-
 ---
 
 # WireGuard VPN Setup & Encrypted TCP Chat (Python)
@@ -162,5 +160,3 @@ You now have a complete setup for:
 Great for learning networking, security, and VPN internals in a hands-on way! 🚀
 
 ---
-
-Would you also like a matching project description and topics for GitHub (`README.md`, `description`, and tags)?
