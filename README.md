@@ -147,6 +147,10 @@ sudo tcpdump -i lo -n tcp port 5555 and "tcp[((tcp[12] & 0xf0) >> 2):1] != 0" -X
 - **Permission errors?**
   - Always run scripts with `sudo`, especially those that modify `/etc/wireguard` or start network interfaces
 
+- **Lost internet after starting VPN?**
+  - If you're running both the server and client on the **same device**, avoid using full tunnel mode (`AllowedIPs = 0.0.0.0/0`) in the client config — this reroutes all traffic (including internet) through the VPN, causing a loop.  
+  - ✅ **Fix:** Use split tunneling by setting `AllowedIPs = 10.0.0.0/24` instead, so only VPN traffic goes through the tunnel while keeping your internet working normally.
+
 ---
 
 ## ✅ Conclusion
