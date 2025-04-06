@@ -16,7 +16,7 @@ It's designed for **local testing**, with both the server and client running on 
 - ✅ Auto-creation of `wg0` (server) and `wg1` (client) configuration files
 - ✅ Auto-start/stop of the VPN interfaces
 - ✅ Encrypted TCP chat between VPN server and client (`server_vpn.py` + `client_vpn.py`)
-- ✅ Normal (unencrypted) TCP chat (`server_normal.py` + `client_normal.py`)
+- ✅ Normal (unencrypted) TCP chat (`server.py` + `client.py`)
 - ✅ Run both ends on the same machine for testing
 
 ---
@@ -55,8 +55,8 @@ This script:
 - `client_vpn.py`: Connects to `10.0.0.1:5555` via VPN tunnel
 
 #### 🔵 Normal Unencrypted Chat (No VPN):
-- `server_normal.py`: Listens on `0.0.0.0:5555` (normal interface)
-- `client_normal.py`: Connects to `0.0.0.0:5555` via default route
+- `server.py`: Listens on `0.0.0.0:5555` (normal interface)
+- `client.py`: Connects to `0.0.0.0:5555` via default route
 
 ---
 
@@ -67,8 +67,8 @@ This script:
 ├── vpn.py              # Automates WireGuard VPN setup
 ├── server_vpn.py        # TCP chat server over VPN
 ├── client_vpn.py        # TCP chat client over VPN
-├── server_normal.py     # Normal TCP server (no VPN)
-├── client_normal.py     # Normal TCP client (no VPN)
+├── server.py     # Normal TCP server (no VPN)
+├── client.py     # Normal TCP client (no VPN)
 ├── wg_keys/             # Generated private/public key files
 ```
 
